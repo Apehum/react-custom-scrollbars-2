@@ -1,8 +1,7 @@
-node_modules
-*.log
 .DS_Store
-dist
-lib
+*.log
+src
+test
+examples
 coverage
-examples/simple/static
-.idea/
+node_modules
