@@ -51,13 +51,15 @@ export interface ScrollbarProps extends React.HTMLProps<Scrollbars> {
     style?: React.CSSProperties;
 }
 
+type ScrollBehavior = "auto" | "smooth" | "instant";
+
 export class Scrollbars extends React.Component<ScrollbarProps> {
-    scrollTop(top: number): void;
-    scrollLeft(left: number): void;
-    scrollToTop(): void;
-    scrollToBottom(): void;
-    scrollToLeft(): void;
-    scrollToRight(): void;
+    scrollTop(top: number, scrollBehavior: ScrollBehavior): void;
+    scrollLeft(left: number, scrollBehavior: ScrollBehavior): void;
+    scrollToTop(scrollBehavior: ScrollBehavior): void;
+    scrollToBottom(scrollBehavior: ScrollBehavior): void;
+    scrollToLeft(scrollBehavior: ScrollBehavior): void;
+    scrollToRight(scrollBehavior: ScrollBehavior): void;
     getScrollLeft(): number;
     getScrollTop(): number;
     getScrollWidth(): number;
